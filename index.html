@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduBoard – Student Progress Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="sidebar" id="sidebar">
+    <h2>EduBoard</h2>
+    <ul>
+      <li><a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
+      <li><a href="#subjects"><i class="fas fa-book"></i> Subjects</a></li>
+      <li><a href="#attendance"><i class="fas fa-user-check"></i> Attendance</a></li>
+      <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
+      <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header>
+      <button class="menu-btn" id="menu-btn"><i class="fas fa-bars"></i></button>
+      <h1>Student Dashboard</h1>
+      <div class="profile">
+        <i class="fas fa-bell"></i>
+        <img src="https://api.dicebear.com/7.x/avataaars/png?seed=john" alt="Student Avatar"/>
+        <span>Bharath Kumar padira</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <section id="dashboard" class="cards">
+        <article class="card">
+          <h3>GPA</h3>
+          <p>8.69</p>
+        </article>
+        <article class="card">
+          <h3>Attendance</h3>
+          <p>92%</p>
+        </article>
+        <article class="card">
+          <h3>Assignments Due</h3>
+          <p>3</p>
+        </article>
+        <article class="card">
+          <h3>Total Credits</h3>
+          <p>22</p>
+        </article>
+      </section>
+
+      <section id="subjects" class="progress">
+        <h3>Subject Progress</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Progress</th>
+              <th>Completion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mathematics</td>
+              <td><div class="progress-bar"><span style="width:80%"></span></div></td>
+              <td>80%</td>
+            </tr>
+            <tr>
+              <td>Physics</td>
+              <td><div class="progress-bar"><span style="width:65%"></span></div></td>
+              <td>65%</td>
+            </tr>
+            <tr>
+              <td>Computer Science</td>
+              <td><div class="progress-bar"><span style="width:90%"></span></div></td>
+              <td>90%</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="attendance" class="deadlines">
+        <h3>Upcoming Deadlines</h3>
+        <div class="deadline-item">
+          <div class="date-badge">Aug 20</div>
+          <div>Math Assignment – Linear Algebra</div>
+        </div>
+        <div class="deadline-item">
+          <div class="date-badge">Aug 25</div>
+          <div>Physics Lab Report – Optics</div>
+        </div>
+        <div class="deadline-item">
+          <div class="date-badge">Sep 02</div>
+          <div>CS Project – Data Structures</div>
+        </div>
+      </section>
+
+      <section id="profile" class="profile-info">
+        <h3>Student Profile</h3>
+        <p><strong>Name:</strong> Bharath Kumar Padira</p>
+        <p><strong>Roll No:</strong> 21CS102</p>
+        <p><strong>Email:</strong> bharath18@gmail.com</p>
+        <p><strong>College:</strong> Vaagdevi College of Engineering</p>
+        <p><strong>Department:</strong> Computer Science</p>
+      </section>
+
+      <section id="settings">
+        <h3>Settings</h3>
+        <p>Preferences and configurations go here...</p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
